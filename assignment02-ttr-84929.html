@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment02 - THi HONG GAM TRAN - 300284929
+        </title>
+        <script src = "js/books.class.js"  defer></script>
+        <script src = "js/database.js" defer></script>
+        <script src = "js/page.js"  defer></script>
+    </head>
+    <body  onload="createTable();">
+        <h2>Database functions</h2>
+        <form>
+            <div class="database">
+                <div>
+                    <input type="button" value="add" onclick="addBook();">
+                </div>
+                <div>
+                    <input type="button" value="delete" onclick="deleteBook();">
+                </div>
+                <div>
+                    <input type="button" value="update" onclick="updateBook();">
+                </div>
+                <div>
+                    <input type="button" value="sort" onclick="sortBook();">
+                </div>
+            </div>
+
+            <h2>Book Information</h2>
+            <table>
+                <tr>
+                    <td>ISBN</td>
+                    <td>
+                        <input type="text" id="isbn" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        <input type="text" id="title" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td>
+                        <input type="text" id="author" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>
+                        <input type="text" id="price" required>
+                    </td>
+                </tr>
+            </table>
+           
+        </form>
+        <h2>Book Statistic</h2>
+        <p id="bookNum">Books in Database:</p>
+        <p id="minPrice">Minimum Price:</p>
+        <p id="maxPrice">Maximum Price:</p>
+        <p id="averagePrice">AveragePrice:</p>
+        
+        <table id="table">
+            <thead>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+               
+            </thead>
+            
+            <tbody id="tableBody">
+                
+            </tbody>
+            
+        </table>
+    </body>
+</html>
